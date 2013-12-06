@@ -10,6 +10,9 @@
 
 [![endorse][endorse-image] ][endorse-url]
 
+I described the motivation behind this little filter in
+[Aged to Perfection](http://bahmutov.calepin.co/aged-to-perfection.html) blog post.
+
 ## install
 
 ```sh
@@ -56,9 +59,6 @@ This will pass all files though less stringent *fresh* limits,
 while passing files older than 3 days though higher limits.
 
 ![sample output](https://raw.github.com/bahmutov/aged/master/aged.png)
-
-I described the motivation behind this little filter in
-[Aged to Perfection](http://bahmutov.calepin.co/aged-to-perfection.html) blog post.
 
 ## advanced
 
