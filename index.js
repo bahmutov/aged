@@ -17,4 +17,4 @@ function aged(n, units) {
   };
 }
 
-module.export = aged;
+module.exports = aged;

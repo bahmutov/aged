@@ -17,5 +17,8 @@
     "utility"
   ],
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "moment": "~2.4.0"
+  }
 }
