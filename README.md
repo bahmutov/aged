@@ -55,7 +55,7 @@ grunt.initConfig({
 This will pass all files though less stringent *fresh* limits,
 while passing files older than 3 days though higher limits.
 
-![sample output](aged.png)
+![sample output](https://raw.github.com/bahmutov/aged/master/aged.png)
 
 ## advanced
 
