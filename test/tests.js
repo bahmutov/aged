@@ -1,9 +1,6 @@
 var moment = require('moment');
 var aged = require('..');
 
-gt.module('3rd party');
-
-
 gt.module('aged');
 
 gt.test('invalid inputs', function () {
@@ -26,4 +23,9 @@ gt.test('invalid inputs', function () {
   gt.throws(function () {
     aged(10);
   }, Error, 'missing units');
+
+  gt.throws(function () {
+    aged(10, 'ffff');
+  }, 'AssertionError', 'invalid units');
 });
+
