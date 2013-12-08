@@ -23,6 +23,7 @@
     "check-types": "~1.1.1"
   },
   "devDependencies": {
-    "gt": "~0.8.20"
+    "gt": "~0.8.20",
+    "mockery": "~1.4.0"
   }
 }

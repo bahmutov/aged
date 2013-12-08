@@ -16,6 +16,8 @@ function aged(n, units, verbose) {
   stableDate.startOf('day');
 
   return function agedFilter(filename) {
+    check.verify.unemptyString(filename, 'need filename string');
+
     var st = fs.statSync(filename);
     var lastDate = moment(st.mtime);
     var before = lastDate.isBefore(stableDate);

@@ -21,6 +21,13 @@ npm install aged --save-dev
 
 ## use
 
+```js
+function aged(n, units, verbose)
+n           - positive number
+units       - time units: 'days', 'hours', 'minutes', etc
+verbose     - print filename if file is too young
+```
+
 *aged* can be used to define different metrics to run on different
 files depending on their age. For example, to pass older, stable
 source files through static [grunt-complexity](https://github.com/vigetlabs/grunt-complexity)
@@ -44,7 +51,7 @@ grunt.initConfig({
         },
         aged: {
             src: files,
-            filter: aged(3, 'days'),
+            filter: aged(3, 'days', true),
             options: {
                 errorsOnly: false,
                 cyclomatic: 2,
