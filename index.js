@@ -2,7 +2,7 @@ var fs = require('fs');
 var moment = require('moment');
 var check = require('check-types');
 
-function aged(n, units) {
+function aged(n, units, verbose) {
   check.verify.positiveNumber(n, 'expected positive number, got ' + n);
   check.verify.unemptyString(units, 'expected units string, got ' + units);
 
@@ -20,7 +20,7 @@ function aged(n, units) {
     var lastDate = moment(st.mtime);
     var before = lastDate.isBefore(stableDate);
 
-    if (!before) {
+    if (!before && verbose) {
       console.log(filename, 'is too young');
     }
     return before;
