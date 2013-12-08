@@ -7,14 +7,15 @@ function aged(n, units) {
   check.verify.unemptyString(units, 'expected units string, got ' + units);
 
   var now = moment();
-  var midnight = now.startOf('day');
-
-  var stableDate = now.subtract(units, n).startOf('day');
+  var stableDate = moment(now).subtract(units, n);
   console.assert(stableDate.isValid(), 'aged date is invalid from', n, units);
-  console.assert(midnight.valueOf() !== stableDate.valueOf(),
+  console.assert(now.valueOf() !== stableDate.valueOf(),
     'stable date is same as now, are units correct?', n, units);
 
-  return function (filename) {
+  // midnight cutoff seems more natural
+  stableDate.startOf('day');
+
+  return function agedFilter(filename) {
     var st = fs.statSync(filename);
     var lastDate = moment(st.mtime);
     var before = lastDate.isBefore(stableDate);

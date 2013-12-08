@@ -31,5 +31,5 @@ gt.test('invalid inputs', function () {
 
 gt.test('returns function', function () {
   var fn = aged(1, 'days');
-  gt.arity(fn, 'filter function expects 1 argument');
+  gt.arity(fn, 1, 'filter function expects 1 argument');
 });
