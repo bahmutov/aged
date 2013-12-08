@@ -29,3 +29,7 @@ gt.test('invalid inputs', function () {
   }, 'AssertionError', 'invalid units');
 });
 
+gt.test('returns function', function () {
+  var fn = aged(1, 'days');
+  gt.arity(fn, 'filter function expects 1 argument');
+});
