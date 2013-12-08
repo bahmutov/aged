@@ -1,11 +1,12 @@
 {
   "name": "aged",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Small utility returning grunt file filter by last modified age",
   "main": "index.js",
   "scripts": {
     "test": "node node_modules/gt test/*.js --output"
   },
+  "pre-commit": "npm test",
   "repository": {
     "type": "git",
     "url": "git://github.com/bahmutov/aged.git"
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "gt": "~0.8.20",
-    "mockery": "~1.4.0"
+    "mockery": "~1.4.0",
+    "pre-git": "0.0.14"
   }
 }
