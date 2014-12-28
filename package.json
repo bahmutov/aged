@@ -20,12 +20,12 @@
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "moment": "^2.6.0",
-    "check-types": "^1.3.0"
+    "check-types": "1.4.0",
+    "moment": "2.8.4"
   },
   "devDependencies": {
-    "gt": "^0.8.36",
+    "gt": "0.8.47",
     "mockery": "~1.4.0",
-    "pre-git": "0.0.16"
+    "pre-git": "0.1.1"
   }
 }
