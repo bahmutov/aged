@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "check-types": "1.4.0",
-    "moment": "2.8.4"
+    "moment": "2.9.0"
   },
   "devDependencies": {
     "gt": "0.8.47",
